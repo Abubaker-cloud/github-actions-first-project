@@ -25,6 +25,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set Environment Variable
+        env:
+          APP_ENV: development
+        run: echo "Environment is $APP_ENV"
       - name: Run Tests
         run: pytest -v
 
